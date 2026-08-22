@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style (1).css" /> -->
+  </head>
+  <body>
+    <div class="calculator-card">
+      <h1>Grade Calculator</h1>
+
+      <div class="input-group">
+        <label for="english">English Marks (out of 100):</label>
+        <input
+          type="number"
+          id="english"
+          min="0"
+          max="100"
+          placeholder="e.g. 75"
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="maths">Maths Marks (out of 100):</label>
+        <input
+          type="number"
+          id="maths"
+          min="0"
+          max="100"
+          placeholder="e.g. 85"
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="science">Science Marks (out of 100):</label>
+        <input
+          type="number"
+          id="science"
+          min="0"
+          max="100"
+          placeholder="e.g. 90"
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="computer">Computer Marks (out of 100):</label>
+        <input
+          type="number"
+          id="computer"
+          min="0"
+          max="100"
+          placeholder="e.g. 80"
+        />
+      </div>
+
+      <button id="calc-btn">Calculate Grade</button>
+
+      <div id="result" class="result-box hidden">
+        <p>
+          <strong>Total Marks:</strong> <span id="total-marks"></span> / 400
+        </p>
+        <p><strong>Percentage:</strong> <span id="percentage"></span>%</p>
+        <p><strong>Grade:</strong> <span id="grade"></span></p>
+        <p><strong>Status:</strong> <span id="status"></span></p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

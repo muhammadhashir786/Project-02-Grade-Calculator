@@ -1,0 +1,37 @@
+takes percentage
+tell grade acc to conditions with greetings
+
+structure:
+
+Phase 1:
+
+input:
+
+student name
+roll no
+3/5 static inputs
+
+output:
+
+show total marks
+show percentage
+show grade
+Show status pass/failed
+
+validation:
+
+marks !== ""	OR 	required
+marks >= 0 and marks <= 100
+min="0" max="100"
+
+percentage formula:
+
+sum of obtain marks/sum of total marks
+status acc to grade
+
+grade display in p tag
+
+
+
+
+

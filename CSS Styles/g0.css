@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1e0a3c 0%, #3a0d5e 40%, #6a0f8f 70%, #1a0b2e 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.calculator-card {
+  background: linear-gradient(160deg, #22103f 0%, #170a28 100%);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow:
+    0 0 25px rgba(255, 60, 172, 0.45),
+    0 0 45px rgba(123, 47, 247, 0.25),
+    0 8px 25px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ff3cac;
+}
+
+.calculator-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffe94a;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #4ad9ff;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #7b2ff7;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #170a28;
+  color: #f5f0ff;
+}
+
+.input-group input::placeholder {
+  color: #7a6a9a;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #ff3cac;
+  box-shadow: 0 0 10px rgba(255, 60, 172, 0.6);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #ff3cac, #7b2ff7, #4ad9ff, #ffe94a);
+  background-size: 300% auto;
+  color: #170a28;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 60, 172, 0.5);
+  transition: background-position 0.5s ease, box-shadow 0.3s ease, transform 0.15s ease;
+}
+
+button:hover {
+  background-position: right center;
+  box-shadow: 0 0 25px rgba(74, 217, 255, 0.7);
+  transform: translateY(-1px);
+}
+
+.result-box {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #170a28;
+  border-left: 5px solid #ffe94a;
+  border-radius: 4px;
+  box-shadow: inset 0 0 15px rgba(123, 47, 247, 0.3);
+}
+
+.result-box p {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #f5f0ff;
+}
+
+.hidden {
+  display: none;
+}
+
+.pass {
+  color: #4ad9ff;
+  font-weight: bold;
+}
+
+.fail {
+  color: #ff3cac;
+  font-weight: bold;
+}
