@@ -1,3 +1,5 @@
+/* Universal Properties */
+
 * {
   margin: 0;
   padding: 0;
@@ -5,10 +7,14 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Body */
+
 body {
   width: 100%;
   min-height: 100vh;
+  /* height: auto; */
   padding: 20px;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,23 +26,30 @@ body {
   ); /* important */
 }
 
+/* Grade Card */
+
 #box {
   width: 100%;
   max-width: 440px;
+  /* max-width: 420px; */
   padding: 35px;
+  /* padding: 20px 24px; */
   border: 1px solid #ff00c8;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  /* gap: 20px; */
+  gap: 12px;
   background: linear-gradient(160deg, #170b2e 0%, #0f0821 100%); /* important */
   box-shadow:
     0 0 20px rgba(255, 0, 200, 0.35),
     0 0 40px rgba(0, 225, 255, 0.15),
     0 8px 25px rgba(0, 0, 0, 0.6); /* important */
 }
+
+/* h1 */
 
 h1 {
   color: #e1ff00;
@@ -49,12 +62,17 @@ h1 {
     0 0 20px rgba(255, 0, 200, 0.4); /* important */
 }
 
+/* Form */
+
 form {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  /* gap: 10px; */
 }
+
+/* Label Input Box */
 
 .inp-label {
   width: 100%;
@@ -63,15 +81,20 @@ form {
   gap: 5px;
 }
 
+/* Label */
+
 label {
   font-size: 14px;
   color: #00e1ff;
   text-shadow: 0 0 6px rgba(0, 225, 255, 0.4);
 }
 
+/* Input */
+
 input {
   width: 100%;
   padding: 10px;
+  /* padding: 7px 10px; */
   background-color: #0d0618;
   color: #f5f0ff;
   font-size: 15px;
@@ -102,6 +125,8 @@ input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s; /* delays browser's own transition */
 }
 
+/* Check Result Button */
+
 button {
   width: 100%;
   padding: 12px;
@@ -128,6 +153,8 @@ button:hover {
   transform: translateY(-1px); /* important */
 }
 
+/* Result */
+
 #result {
   width: 100%;
   display: none;
@@ -142,6 +169,8 @@ button:hover {
   line-height: 1.75rem;
 }
 
+/* Status Pass & Fail */
+
 .pass {
   color: #37ff00;
   font-weight: bold;
@@ -154,20 +183,63 @@ button:hover {
   text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
 }
 
-@media screen and (max-width: 500px) {
+/* Responsive */
+
+/* Laptop Screen (Low Height) Specific Adjustment */
+
+@media screen and (max-height: 800px) {
+  body {
+    padding: 12px;
+  }
+
   #box {
-    padding: 25px;
+    max-width: 410px;
+    padding: 25px 30px;
+    padding-bottom: 26px;
+    gap: 15px;
   }
 
   h1 {
     font-size: 24px;
-    text-align: center;
+    letter-spacing: 0.8px;
+  }
+
+  form {
+    gap: 12px;
+  }
+
+  .inp-label {
+    gap: 5px;
+  }
+
+  label {
+    font-size: 13px;
+  }
+
+  input {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  #result {
+    padding: 12px 14px;
+    font-size: 14px;
+    line-height: 1.55rem;
   }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 440px) {
   #box {
-    padding: 18px;
-    gap: 15px;
+    /* max-width: 400px; */
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 22px;
   }
 }

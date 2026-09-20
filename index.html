@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project | Student Grade Calculator</title>
+    <title>Student Grade Calculator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Grade Card -->
     <div id="box">
       <h1>Grade Calculator</h1>
 
-      <form onsubmit="calculateGrade(event)">
+      <!-- Form -->
+      <form>
         <!-- Name -->
         <div class="inp-label">
           <label for="userName">Name:</label>
@@ -43,7 +45,7 @@
 
         <!-- Math Marks -->
         <div class="inp-label">
-          <label for="mathMarks">Maths Marks (out of 100):</label>
+          <label for="mathMarks">Math Marks (out of 100):</label>
           <input
             type="number"
             id="mathMarks"
@@ -74,7 +76,6 @@
     </div>
 
     <!-- js file -->
-
     <script src="app.js"></script>
   </body>
 </html>

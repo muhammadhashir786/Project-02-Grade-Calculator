@@ -1,61 +1,76 @@
+// Element Selection:
+
 let form = document.querySelector("form")
 let inputs = document.querySelectorAll("input")
-let box = document.querySelector("#box")
 let result = document.querySelector("#result")
 
-function calculateGrade(event) {
+// Form Event - Submit:
+
+form.addEventListener("submit", function (event) {
     event.preventDefault()
 
-    let name = inputs[0].value
-    let rollNo = parseFloat(inputs[1].value)
+    // Extract Value:
+
+    let name = inputs[0].value.trim()
+    let rollNo = parseInt(inputs[1].value.trim())
     let engMarks = parseFloat(inputs[2].value)
     let mathMarks = parseFloat(inputs[3].value)
     let compMarks = parseFloat(inputs[4].value)
 
+    // Find Total Marks & Percentage:
+
     let totalMarks = engMarks + mathMarks + compMarks
     let percentage = ((totalMarks / 300) * 100).toFixed(2)
+
+    // Grade, Status & Class:
 
     let grade = ""
     let status = ""
     let statusClass = ""
 
-    if (percentage >= 90 && percentage <= 100) {
+    // Find Grade, Status & Class Using if else if Ladder:
+
+    if (percentage >= 90) {
         grade = `A+`
-        status = "Great! you have passed"
+        status = "Outstanding! You have passed"
         statusClass = "pass"
 
-    } else if (percentage >= 80 && percentage <= 89.99) {
+    } else if (percentage >= 80) {
         grade = `A`
-        status = "Amazing! you have passed"
+        status = "Excellent! You have passed"
         statusClass = "pass"
 
-    } else if (percentage >= 70 && percentage <= 79.99) {
+    } else if (percentage >= 70) {
         grade = `B`
-        status = "Nice! you have passed"
+        status = "Good job! You have passed"
         statusClass = "pass"
 
-    } else if (percentage >= 60 && percentage <= 69.99) {
+    } else if (percentage >= 60) {
         grade = `C`
-        status = "Very Good! you have passed"
+        status = "Satisfactory! You have passed"
         statusClass = "pass"
 
-    } else if (percentage >= 40 && percentage <= 59.99) {
+    } else if (percentage >= 40) {
         grade = `D`
-        status = "Good! you have passed"
+        status = "Needs Improvement! You have passed"
         statusClass = "pass"
 
     } else {
         grade = `E`
-        status = "Damn! You Failed"
+        status = "Failed"
         statusClass = "fail"
     }
 
-    result.style.display = "block"
+    // Show Result:
 
-    result.innerHTML = `<strong>Name: </strong> ${name} <br> 
+    result.style.display = "block"
+    result.innerHTML = `
+    <strong>Name: </strong> ${name} <br> 
     <strong>Roll No: </strong> ${rollNo} <br>
     <strong>Total Marks: </strong> ${totalMarks}/300 <br>
     <strong>Percentage: </strong> ${percentage}% <br>
     <strong>Grade: </strong> ${grade} <br>
-    <strong>Status: </strong> <span class="${statusClass}">${status}</span>`
-}
+    <strong>Status: </strong> <span class="${statusClass}">${status}</span>
+    `;
+
+})
